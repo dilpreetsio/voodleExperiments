@@ -1,13 +1,24 @@
 <html>
     <head>
         <title>voodleExperiments</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
+        <div class="animationBox">
+            <div id="box">
+                <div class="boxSmall"></div>
+                <div class="boxSmall boxTiny"></div>
+            </div>    
+        </div>
         <div>
-            <button id="three">Three JS</button>
-            <button id="create">Create JS</button>
+            These buttons will render video using respective library <br>
+            <button id="puppeteer">Pupet</button>
+            <button id="selenium">Selenium</button>
             <button id="gsap">Gsap</button>
         </div>
+        <script src="/socket.io/socket.io.js"></script>
         <script src="/js/index.js"></script>
     </body>
 </html>
