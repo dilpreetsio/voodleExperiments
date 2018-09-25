@@ -15,7 +15,6 @@ server.listen(5000, function() {
 })
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
 
   });
@@ -28,4 +27,12 @@ io.on('connection', function (socket) {
     render.renderSelenium();
   })
 
+  socket.on('ffmpeg', function(){
+    render.svgToVideo();
+  })
+
+  socket.on('cc', function(data){
+    render.capture();
+  })
+  
 });

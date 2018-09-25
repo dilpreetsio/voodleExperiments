@@ -1,11 +1,6 @@
 // connect socket here
 var socket = io.connect();
 
-socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-
 // GASP CODE FOR TEST
 
 // 1. Create a variable
@@ -50,9 +45,25 @@ function complete(){
 }
 
 
-$('#gsap').click(function (e) {
+$('#cc').click(function (e) {
     let dom = document.getElementById('box');
     
-    socket.emit('render', { dom: dom })
-    console.log(dom)
+    socket.emit('ccapture', { dom: dom })
+})
+
+$('#ffmpeg').click(function (e) {
+    socket.emit('ffmpeg', { message: "Render using imagemagic & FFMPEG" })
+})
+
+$('#cc').click(function (e) {
+    //socket.emit('cc', { dom: document.getElementById('cc')})
+
+    canvg('canvas', '../sample.svg')
+
+    // Convert SVG to CANVAS
+    html2canvas(document.querySelector("#svg")).then(canvas => {
+        document.body.appendChild(canvas)
+    });
+    
+    // Capture Canvas using CCAPTURE
 })

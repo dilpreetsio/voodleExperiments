@@ -2,21 +2,27 @@
     <head>
         <title>voodleExperiments</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script src="/js/CCapture.all.min.js"></script>        
+        <!--<!-- Required to convert named colors to RGB  Required to convert named colors to RGB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/rgbcolor.min.js"></script>
+        <!-- Optional if you want blur -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/1.4.1/stackblur.min.js"></script>
+        <!-- Main canvg code -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
-        <div class="animationBox">
-            <div id="box">
-                <div class="boxSmall"></div>
-                <div class="boxSmall boxTiny"></div>
-            </div>    
+        <div id="svg">
+            <img src="../sample.svg" alt="animated svg of loader">
         </div>
+        <canvas id="canvas"></canvas>
         <div>
-            These buttons will render video using respective library <br>
+            Render Using <br>
             <button id="puppeteer">Pupet</button>
-            <button id="selenium">Selenium</button>
-            <button id="gsap">Gsap</button>
+            <button id="ffmpeg">FFmpeg & ImageMagick</button>
+            <button id="cc">CCAPTURE IT</button>
         </div>
         <script src="/socket.io/socket.io.js"></script>
         <script src="/js/index.js"></script>

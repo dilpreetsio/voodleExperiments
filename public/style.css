@@ -27,3 +27,10 @@ html, body {
     height: 50px;
     z-index: 3;
 }
+
+button {
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+}
