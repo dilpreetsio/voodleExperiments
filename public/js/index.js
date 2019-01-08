@@ -58,12 +58,16 @@ $('#ffmpeg').click(function (e) {
 $('#cc').click(function (e) {
     //socket.emit('cc', { dom: document.getElementById('cc')})
 
-    canvg('canvas', '../sample.svg')
+    //canvg('canvas', '../sample.svg')
 
+    canvg('canvas', '../sample.svg', { ignoreMouse: true, useCORS: true, log: true })
+
+    
     // Convert SVG to CANVAS
     html2canvas(document.querySelector("#svg")).then(canvas => {
         document.body.appendChild(canvas)
     });
+    
     
     // Capture Canvas using CCAPTURE
 })
